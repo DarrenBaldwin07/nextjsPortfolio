@@ -3,7 +3,7 @@ import { Button, Text, Box, Container, Image as Img } from '@chakra-ui/react'
 import Navigation from '../components/navigation'
 const Home: NextPage = () => {
   return (
-    <Container maxW='container.xl'>
+    <Container px={10} maxW='container.xl'>
       <head>
         <title>Darren Baldwin</title>
       </head>

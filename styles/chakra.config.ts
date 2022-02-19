@@ -1,20 +1,22 @@
 import { extendTheme } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 import { buttonStyles as Button } from './components/buttonStyles'
-
+import { headerStyles as Heading } from './components/headerStyles'
 const breakpoints = createBreakpoints({
-  sm: '5em',
+  sm: '10em',
   md: '48em',
   lg: '62em',
   xl: '80em',
-  '2xl': '96em',  
+  '2xl': '96em',
 })
 
 const colors = {
   brand: {
     'darkGrey': '#212121',
+    'lightGrey': '#353535',
     'lightGreen': '#39BA8C',
     'darkGreen': '#309873',
+    'blue': "#5196FF"
   },
 }
 
@@ -23,7 +25,8 @@ const theme = {
   colors: colors,
 
   fonts: {
-    body: 'Righteous'
+    body: 'Righteous', 
+    heading: 'Righteous'
   },
 
   styles: { // global styles for buttons
@@ -35,7 +38,8 @@ const theme = {
   },
 
   components: { // ovverride existing styles by component
-    Button
+    Button,
+    Heading,
   }
 }
 
