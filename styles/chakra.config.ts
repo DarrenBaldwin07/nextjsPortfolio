@@ -4,7 +4,7 @@ import { buttonStyles as Button } from './components/buttonStyles'
 import { headerStyles as Heading } from './components/headerStyles'
 const breakpoints = createBreakpoints({
   sm: '10em',
-  md: '48em',
+  md: '50em',
   lg: '62em',
   xl: '80em',
   '2xl': '96em',

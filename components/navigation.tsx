@@ -29,9 +29,9 @@ const navigation: NextPage = () => {
             <Heading variant='primary'>Darren Baldwin</Heading>
             <Spacer />
             <HStack display={{sm: 'none', md: 'flex'}} spacing={14}>
-              <NextLink href='#'><Heading _hover={{cursor: 'pointer'}} color='white'>Work</Heading></NextLink>
-              <NextLink href='#'><Heading _hover={{cursor: 'pointer'}} color='white'>Stack</Heading></NextLink>
-              <NextLink href='#'><Heading _hover={{cursor: 'pointer'}} color='white'>About</Heading></NextLink>
+              <NextLink href='#hello'><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>Work</Heading></motion.a></NextLink>
+              <NextLink href='#'><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>Stack</Heading></motion.a></NextLink>
+              <NextLink href='#'><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>About</Heading></motion.a></NextLink>
               <Button rounded='full' px={6}>Contact</Button>
             </HStack>
             <Box display={{md: 'none'}}>
@@ -39,10 +39,10 @@ const navigation: NextPage = () => {
                   <MenuButton>
                     <Img src='/images/MenuIcon.svg' width={12}/>
                   </MenuButton>
-                  <MenuList border='2px' bg="brand.lightGrey" borderColor='brand.lightGreen'>
-                    <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><NextLink href='#'>Work</NextLink></MenuItem>
-                    <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><NextLink href='#'>Stack</NextLink></MenuItem>
-                    <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><NextLink href='#'>About</NextLink></MenuItem>
+                  <MenuList bg='brand.lightGrey' border='2px' borderColor='brand.lightGreen'>
+                    <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><a href='#'>Work</a></MenuItem>
+                    <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><a href='#'>Stack</a></MenuItem>
+                    <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><a href='#'>About</a></MenuItem>
                   </MenuList>
                 </Menu>
             </Box>

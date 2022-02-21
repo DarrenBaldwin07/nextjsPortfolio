@@ -9,6 +9,10 @@ export const buttonStyles = {
         px: 3,
         py: 3
       },
+      lg: {
+        px: 6,
+        py: 3
+      },
     },
     // styles for different visual variants ("outline", "solid")
     variants: {
@@ -22,7 +26,7 @@ export const buttonStyles = {
         fontSize: 15
       },
       border: { // add this variant for rounded buttons
-        borderRadius: 25,
+        borderRadius: 'full',
         color: 'white',
         border: '2px', 
         borderColor: 'brand.lightGreen',

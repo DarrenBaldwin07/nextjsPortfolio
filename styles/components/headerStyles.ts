@@ -10,6 +10,9 @@ export const headerStyles = {
         },
         lg: {
             fontSize: '30px'
+        },
+        xl: {
+          fontSize: '45px'
         }
     },
     // styles for different visual variants ("outline", "solid")
