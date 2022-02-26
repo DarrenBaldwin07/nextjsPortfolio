@@ -3,7 +3,10 @@ import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Li
 import Navigation from '../components/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import ProjectList from '../components/projectList'
+import { motion, useMotionValue, useTransform } from "framer-motion"
 const Home: NextPage = () => {
+
   return (
     <Container px={10} maxW='container.xl'>
       <Box>
@@ -41,7 +44,20 @@ const Home: NextPage = () => {
           </Box>
         </Box>
         <Box mt={24}>
-          <Img width={500} src='/images/subHero.svg' alt='code window'/>
+          <Flex justifyContent='space-between' alignItems='center'>
+            <Img width={500} src='/images/subHero.svg' alt='code window'/>
+            <VStack spacing={10} align='start'>
+              <Box maxW={300} ml={10}>
+                <Heading size='xl' color='brand.blue'>My Work</Heading>
+                <Text color='white' mt={2}>Bellow is a list of projects that i've worked on.</Text>
+              </Box>
+              <Img w={400} h={150} src='images/codeOne.svg' alt='code'/>
+            </VStack>
+          </Flex>
+        </Box>
+        <Box mt={24}>
+          <Heading size='lg' color='brand.blue'>Projects</Heading>
+          <ProjectList />
         </Box>
       </Box>
     </Container>
