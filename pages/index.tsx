@@ -3,15 +3,19 @@ import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Li
 import Navigation from '../components/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import ProjectList from '../components/projectList'
+import { motion, useMotionValue, useTransform, useAnimation } from "framer-motion"
+import Head from 'next/head'
 const Home: NextPage = () => {
+
   return (
     <Container px={10} maxW='container.xl'>
       <Box>
-        <head>
+        <Head>
           <title>Darren Baldwin</title>
-        </head>
+        </Head>
         <Navigation />
-        <Box mt={{base: 24, lg: 0}}>
+        <Box mt={{base: 24, lg: 12}}>
           <Box display='flex' justifyContent={{base: 'center', lg:'space-between'}} alignItems='center'>
             <VStack align={{base: 'center', lg: 'start'}} spacing={12}>
               <VStack spacing={5} align={{base: 'center', lg:'start'}} maxW={500}>
@@ -40,8 +44,23 @@ const Home: NextPage = () => {
             <Img display={{base: 'none', lg: 'flex'}} width={500} src='/images/HeroImg.svg' alt='man coding'/>
           </Box>
         </Box>
+        <Box mt={36}>
+          <Flex justifyContent='space-between' alignItems='center'>
+            <Img width={500} src='/images/subHero.svg' alt='code window'/>
+            <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: 300, opacity: 0 }}  transition={{duration: 0.25, delay: 0.25}}>
+              <VStack spacing={10} align='start'>
+                <Box maxW={300} ml={10}>
+                  <Heading size='xl' color='brand.blue'>My Work</Heading>
+                  <Text color='white' mt={2}>Bellow is a list of projects that i've worked on.</Text>
+                </Box>
+                <Img w={400} h={150} src='images/codeOne.svg' alt='code'/>
+              </VStack>
+            </motion.div>
+          </Flex>
+        </Box>
         <Box mt={24}>
-          <Img width={500} src='/images/subHero.svg' alt='code window'/>
+          <Heading size='lg' color='brand.blue'>Projects</Heading>
+          <ProjectList />
         </Box>
       </Box>
     </Container>

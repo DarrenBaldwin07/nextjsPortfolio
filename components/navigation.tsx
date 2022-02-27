@@ -10,11 +10,6 @@ import {
   MenuItem,
   Image as Img,
   type BoxProps,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuCommand,
-  MenuDivider,
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import NextLink from "next/link"
