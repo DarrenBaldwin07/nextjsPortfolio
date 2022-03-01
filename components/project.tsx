@@ -1,5 +1,6 @@
 import { Text, Box, HStack, Image as Img, VStack, Heading, Button, Flex, Link } from '@chakra-ui/react'
 import type { logoProps } from '../types/types'
+import { motion } from "framer-motion"
 
 interface props {
     image: string
@@ -12,7 +13,8 @@ interface props {
 // No need for return types - only do props (according to best practices) - you could do JSX.Element
 const project = ({ image, heading, text, logos, link, github }: props) => {
   return (
-    <Box w={350} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg'>
+    <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -300, opacity: 0 }}  transition={{duration: 0.25, delay: 0.40}}>
+      <Box w={350} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg'>
         <Box >
           <VStack align='start' spacing={12}>
             <VStack spacing={4} align='start'>
@@ -25,12 +27,13 @@ const project = ({ image, heading, text, logos, link, github }: props) => {
               </HStack>
             </VStack>
             <HStack w='full' spacing={10}>
-              <Button variant='border' w='full'><Link _hover={{textDecoration: 'none'}} href={link}>Live Site</Link></Button>
+              <Link w='full' href={link} isExternal><Button variant='border' w='full'>Live Site</Button></Link>
               <Box w={14} bg='brand.lightGreen' rounded='full'><Link href={github} isExternal><Img p={1.5} src='images/Github.svg' /></Link></Box>
             </HStack>
           </VStack>
         </Box>
-    </Box>
+      </Box>
+    </motion.div>
   )
 }
 

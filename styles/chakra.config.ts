@@ -32,7 +32,7 @@ const theme = {
   styles: { // global styles for buttons
       global: { // this is where we would declare global font families to apply to everything
         body: {
-          bg: 'brand.darkGrey'
+          bg: 'brand.darkGrey',
         }
       }
   },
