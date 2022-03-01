@@ -19,7 +19,7 @@ const projectList = () => {
       heading: 'Ebuy', 
       text: 'Fullstack eccomerce CRUD application.', 
       logos: [{src: 'images/vue.svg', alt: 'vue.js'}, {src: 'images/Tailwind.svg', alt: 'tailwind css'}, {src: 'images/supabase.svg', alt: 'supabase'}],
-      link: 'vue-crud-neon.vercel.app',
+      link: 'https://vue-crud-neon.vercel.app',
       github: 'https://github.com/Devd0/eBuy'
     },
     {
@@ -27,7 +27,7 @@ const projectList = () => {
       heading: 'Ebuy', 
       text: 'Fullstack eccomerce CRUD application.', 
       logos: [{src: 'images/vue.svg', alt: 'vue.js'}, {src: 'images/Tailwind.svg', alt: 'tailwind css'}, {src: 'images/supabase.svg', alt: 'supabase'}],
-      link: 'vue-crud-neon.vercel.app',
+      link: 'https://vue-crud-neon.vercel.app',
       github: 'https://github.com/Devd0/eBuy'
     },
     {
@@ -35,14 +35,14 @@ const projectList = () => {
       heading: 'Ebuy', 
       text: 'Fullstack eccomerce CRUD application.', 
       logos: [{src: 'images/vue.svg', alt: 'vue.js'}, {src: 'images/Tailwind.svg', alt: 'tailwind css'}, {src: 'images/supabase.svg', alt: 'supabase'}],
-      link: 'vue-crud-neon.vercel.app',
+      link: 'https://vue-crud-neon.vercel.app',
       github: 'https://github.com/Devd0/eBuy'
     }
   ]
   return (
     <Box mt={10} mb={4}>
       <Flex justifyContent='space-between'>
-        {projects.map(({ image, heading, text, logos, link, github}) => (<Project image={image} heading={heading} text={text} logos={logos} link={link} github={github}/>))}
+        {projects.map(({ image, heading, text, logos, link, github}) => (<Project key={link} image={image} heading={heading} text={text} logos={logos} link={link} github={github}/>))}
       </Flex>
     </Box>
   )
