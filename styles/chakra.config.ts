@@ -6,6 +6,7 @@ const breakpoints = createBreakpoints({
   sm: '10em',
   md: '50em',
   lg: '62em',
+  x: '70em',
   xl: '80em',
   '2xl': '96em',
 })
@@ -33,6 +34,10 @@ const theme = {
       global: { // this is where we would declare global font families to apply to everything
         body: {
           bg: 'brand.darkGrey',
+          
+        },
+        html: {
+          scrollBehavior: 'smooth',
         }
       }
   },

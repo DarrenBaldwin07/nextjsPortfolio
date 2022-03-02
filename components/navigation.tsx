@@ -35,7 +35,7 @@ const navigation: NextPage = () => {
   }, []);
 
   return (
-    <Box position='fixed' zIndex={2} top={0} py={4} bg={scrollY > 10 ? 'brand.lightGrey' : ''}  opacity={scrollY > 10 ? 1 : 1} width='full'>
+    <Box position='fixed' zIndex={2} top={0} py={4} bg={scrollY > 10 ? 'brand.darkGrey' : ''}  opacity={scrollY > 10 ? 1 : 1} width='full'>
       <Container px={10} maxW='container.xl'>
         <Box>
           <HStack>
