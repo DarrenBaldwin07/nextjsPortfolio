@@ -1,6 +1,5 @@
 import { Text, Box, HStack, Image as Img, VStack, Heading, Button, Flex, Link } from '@chakra-ui/react'
 import type { logoProps } from '../types/types'
-import { motion } from "framer-motion"
 
 interface props {
     image: string
@@ -13,9 +12,9 @@ interface props {
 // No need for return types - only do props (according to best practices) - you could do JSX.Element
 const project = ({ image, heading, text, logos, link, github }: props) => {
   return (
-    <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -300, opacity: 0 }}  transition={{duration: 0.25, delay: 0.40}}>
-      <Box w={350} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg'>
-        <Box >
+
+      <Box  w={350} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg'>
+        <Box>
           <VStack align='start' spacing={12}>
             <VStack spacing={4} align='start'>
               <Img rounded='md' src={image}/>
@@ -33,7 +32,6 @@ const project = ({ image, heading, text, logos, link, github }: props) => {
           </VStack>
         </Box>
       </Box>
-    </motion.div>
   )
 }
 

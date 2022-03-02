@@ -7,16 +7,15 @@ import ProjectList from '../components/projectList'
 import { motion } from "framer-motion"
 import Head from 'next/head'
 const Home: NextPage = () => {
-
   return (
-    <Box>
+    <Box overflow='hidden'>
       <Head>
         <title>Darren Baldwin</title>
       </Head>
       <Navigation />
       <Container px={10} maxW='container.xl'>
-        <Box className='test'>
-          <Box mt={24}>
+        <Box>
+          <Box mt={{base: 36, lg: 24}}>
             <Box display='flex' justifyContent={{base: 'center', lg:'space-between'}} alignItems='center'>
               <VStack align={{base: 'center', lg: 'start'}} spacing={12}>
                 <VStack spacing={5} align={{base: 'center', lg:'start'}} maxW={500}>
@@ -33,7 +32,6 @@ const Home: NextPage = () => {
                     <Box display={{base: 'flex', md: 'none'}}>
                       <FontAwesomeIcon size="lg" color='#39BA8C' icon={faArrowDown} />
                     </Box>
-                    
                     <Button my={{base: 4, md: 0}} ml={{base: 'none', md: 4}} variant='border' size='lg'>My Work</Button>
                   </Flex>
                   <HStack spacing={5}>
@@ -43,19 +41,19 @@ const Home: NextPage = () => {
                   </HStack> 
                 </VStack>
               </VStack>
-              <Img display={{base: 'none', lg: 'flex'}} width={500} src='/images/HeroImg.svg' alt='man coding'/>
+              <Img display={{base: 'none', lg: 'flex'}} width={{base: 400, x: 500}} src='/images/HeroImg.svg' alt='man coding'/>
             </Box>
           </Box>
           <Box mt={36}>
-            <Flex justifyContent='space-between' alignItems='center'>
+            <Flex justifyContent={{base: 'center', md: 'space-between'}} alignItems='center'>
               <Img width={500} src='/images/subHero.svg' alt='code window'/>
-              <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: 300, opacity: 0 }}  transition={{duration: 0.25, delay: 0.25}}>
-                <VStack spacing={10} align='start'>
-                  <Box maxW={300} ml={10}>
+              <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: 300, opacity: 0 }} transition={{duration: 0.25, delay: 0.25}}>
+                <VStack spacing={10} display={{base: 'none', md: 'block'}}>
+                  <Box maxW={300} ml={{base: 0, lg: 10}}>
                     <Heading size='xl' color='brand.blue'>My Work</Heading>
-                    <Text color='white' mt={2}>Bellow is a list of projects that i've worked on.</Text>
+                    <Text display={{base: 'none', lg: 'flex'}} color='white' mt={2}>Bellow is a list of projects that i've worked on.</Text>
                   </Box>
-                  <Img w={400} h={150} src='images/codeOne.svg' alt='code'/>
+                  <Img h={150} display={{base: 'none', xl: 'block'}} src='images/codeOne.svg' alt='code'/>
                 </VStack>
               </motion.div>
             </Flex>
