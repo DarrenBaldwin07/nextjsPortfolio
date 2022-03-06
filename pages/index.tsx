@@ -1,12 +1,22 @@
 import type { NextPage } from 'next'
-import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex} from '@chakra-ui/react'
+import { useEffect } from 'react'
+import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex, Stack} from '@chakra-ui/react'
 import Navigation from '../components/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import ProjectList from '../components/projectList'
+import StackLogo from '../components/stackLogo'
 import { motion } from "framer-motion"
 import Head from 'next/head'
 const Home: NextPage = () => {
+/* useEffect(() => {
+  const func = async () => {
+    const data = await fetch('/api/hello')
+    console.log(await data.json())
+  }
+  func()
+}, []) */
+
   return (
     <Box overflow='hidden'>
       <Head>
@@ -62,11 +72,30 @@ const Home: NextPage = () => {
             <Heading size='lg' color='brand.blue'>Projects</Heading>
             <ProjectList />
           </Box>
+          <Box mt={24} id='stack'>
+            <Flex direction={{base: 'column', xl: 'row'}} justify='space-between'>
+              <VStack align='start' spacing={10}>
+                <Box maxW={300}>
+                  <Heading size='xl' color='brand.blue'>Stack</Heading>
+                  <Text color='white' mt={2}>The everyday technology stack I use to solve problems.</Text>
+                </Box>
+                <Img display={{base: 'none', xl: 'block'}} h={100} src='images/codeTwo.svg' alt='code'/>
+              </VStack>
+              <HStack flexWrap='wrap' align='start' justify={{base: 'center', sm: 'space-between'}} spacing={{base: 0, xl: 16}}>
+                <StackLogo title='React' img='images/React.svg'/>
+                <StackLogo title='Vue.js' img='images/Vue.svg'/>
+                <StackLogo title='Typescript' img='images/Typescript.svg'/>
+                <StackLogo title='Node.js' img='images/Node.svg'/>
+                <StackLogo title='Python' img='images/Python.svg'/>
+              </HStack>
+            </Flex>
+          </Box>
         </Box>
       </Container>
     </Box>
-    
   )
+
 }
+
 
 export default Home

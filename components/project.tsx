@@ -13,7 +13,7 @@ interface props {
 const project = ({ image, heading, text, logos, link, github }: props) => {
   return (
 
-      <Box  w={350} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg'>
+      <Box w={{base: 'full', md: 350}} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg'>
         <Box>
           <VStack align='start' spacing={12}>
             <VStack spacing={4} align='start'>

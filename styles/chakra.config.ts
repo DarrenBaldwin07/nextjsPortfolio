@@ -38,7 +38,8 @@ const theme = {
         },
         html: {
           scrollBehavior: 'smooth',
-        }
+        },
+
       }
   },
 
