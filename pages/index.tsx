@@ -1,21 +1,24 @@
 import type { NextPage } from 'next'
 import { useEffect } from 'react'
-import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex, Stack} from '@chakra-ui/react'
+import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex, Spacer} from '@chakra-ui/react'
 import Navigation from '../components/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faArrowDown, faDownload } from '@fortawesome/free-solid-svg-icons'
 import ProjectList from '../components/projectList'
 import StackLogo from '../components/stackLogo'
 import { motion } from "framer-motion"
 import Head from 'next/head'
+import SocialsList from '../components/socialsList'
 const Home: NextPage = () => {
-/* useEffect(() => {
-  const func = async () => {
-    const data = await fetch('/api/hello')
-    console.log(await data.json())
-  }
-  func()
-}, []) */
+
+  useEffect(() => {
+    const func = async () => {
+      const data = await fetch('/api/hello')
+      console.log(await data.json())
+    }
+    
+    func()
+  }, [])
 
   return (
     <Box overflow='hidden'>
@@ -44,11 +47,7 @@ const Home: NextPage = () => {
                     </Box>
                     <Button my={{base: 4, md: 0}} ml={{base: 'none', md: 4}} variant='border' size='lg'>My Work</Button>
                   </Flex>
-                  <HStack spacing={5}>
-                    <Box width={8} height={8} rounded='full' bg='brand.lightGreen'><Link href='https://github.com/Devd0' isExternal><Img p={1.5} src='/images/Github.svg' alt='github'/></Link></Box>
-                    <Box width={8} height={8} rounded='full' bg='brand.lightGreen'><Link href='#' isExternal><Img p={1.5} src='/images/Twitter.svg' alt='Twitter'/></Link></Box>
-                    <Box width={8} height={8} rounded='full' bg='brand.lightGreen'><Link href='https://www.linkedin.com/in/real-darren-baldwin/' isExternal><Img p={1.5} src='/images/LinkedIn.svg' alt='LinkedIn'/></Link></Box>
-                  </HStack> 
+                  <SocialsList />
                 </VStack>
               </VStack>
               <Img display={{base: 'none', lg: 'flex'}} width={{base: 400, x: 500}} src='/images/HeroImg.svg' alt='man coding'/>
@@ -68,20 +67,22 @@ const Home: NextPage = () => {
               </motion.div>
             </Flex>
           </Box>
-          <Box mt={24} id='projects'>
+          <Box mt={36} id='projects'>
             <Heading size='lg' color='brand.blue'>Projects</Heading>
             <ProjectList />
           </Box>
-          <Box mt={24} id='stack'>
+          <Box mt={36} id='stack'>
             <Flex direction={{base: 'column', xl: 'row'}} justify='space-between'>
-              <VStack align='start' spacing={10}>
-                <Box maxW={300}>
-                  <Heading size='xl' color='brand.blue'>Stack</Heading>
-                  <Text color='white' mt={2}>The everyday technology stack I use to solve problems.</Text>
-                </Box>
-                <Img display={{base: 'none', xl: 'block'}} h={100} src='images/codeTwo.svg' alt='code'/>
-              </VStack>
-              <HStack flexWrap='wrap' align='start' justify={{base: 'center', sm: 'space-between'}} spacing={{base: 0, xl: 16}}>
+              <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -300, opacity: 0 }} transition={{duration: 0.25, delay: 0.25}}>
+                <VStack align='start' spacing={10}>
+                  <Box maxW={300}>
+                    <Heading size='xl' color='brand.blue'>Stack</Heading>
+                    <Text color='white' mt={2}>The everyday technology stack I use to solve problems.</Text>
+                  </Box>
+                  <Img display={{base: 'none', xl: 'block'}} h={100} src='images/codeTwo.svg' alt='code'/>
+                </VStack>
+              </motion.div>
+              <HStack flexWrap='wrap' align='start' justify='space-between' spacing={{base: 0, xl: 16}}>
                 <StackLogo title='React' img='images/React.svg'/>
                 <StackLogo title='Vue.js' img='images/Vue.svg'/>
                 <StackLogo title='Typescript' img='images/Typescript.svg'/>
@@ -90,6 +91,23 @@ const Home: NextPage = () => {
               </HStack>
             </Flex>
           </Box>
+        </Box>
+        <Box mt={56} id='about' mb={24}>
+          <Flex align='center' justify='space-between'>
+            <Box bg='brand.lightGrey' borderTopLeftRadius={20} borderBottomRadius='md' borderTopRightRadius='md'>
+              <Box h={200} borderTopLeftRadius={20} borderTopRightRadius='md' bgGradient='linear(to-r, brand.lightGreen, brand.blue)'/>
+              <Box p={4}>
+                <Text color='white'>Hello world</Text>
+              </Box>
+            </Box>
+            <VStack align='start' spacing={10} mr={12}>
+              <Box ml={10}>
+                <Heading size='xl' color='brand.blue'>About Me</Heading>
+                <Text color='white'>My story, who i am, and what i do.</Text>
+              </Box>
+              <Img h={100} src='images/codeOne.svg' alt='code' />
+            </VStack>
+          </Flex>
         </Box>
       </Container>
     </Box>
