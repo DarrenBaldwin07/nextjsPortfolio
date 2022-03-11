@@ -44,7 +44,7 @@ const navigation: NextPage = () => {
               <HStack display={{sm: 'none', md: 'flex'}} spacing={14}>
                 <Box onClick={() => window.scrollTo(0, 1100)}><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>Work</Heading></motion.a></Box>
                 <Box onClick={() => window.scrollTo(0, 1700)}><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>Stack</Heading></motion.a></Box>
-                <Box onClick={() => window.scrollTo(0, 1800)}><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>About</Heading></motion.a></Box>
+                <Box onClick={() => window.scrollTo(0, 2200)}><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>About</Heading></motion.a></Box>
                 <Button rounded='full' px={6}>Contact</Button>
               </HStack>
               <Box display={{md: 'none'}}>

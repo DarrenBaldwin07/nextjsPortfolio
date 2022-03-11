@@ -94,10 +94,22 @@ const Home: NextPage = () => {
         </Box>
         <Box mt={56} id='about' mb={24}>
           <Flex align='center' justify='space-between'>
-            <Box bg='brand.lightGrey' borderTopLeftRadius={20} borderBottomRadius='md' borderTopRightRadius='md'>
-              <Box h={200} borderTopLeftRadius={20} borderTopRightRadius='md' bgGradient='linear(to-r, brand.lightGreen, brand.blue)'/>
-              <Box p={4}>
-                <Text color='white'>Hello world</Text>
+            <Box h={450} w={500} bg='brand.lightGrey' borderTopLeftRadius={36} borderBottomRadius='md' borderTopRightRadius='md'>
+              <Box h={100} borderTopLeftRadius={36} borderTopRightRadius='md' bgGradient='linear(to-r, brand.lightGreen, brand.blue)'/>
+              <Box p={4} position='relative' top={-50}>
+                <Box w={16} rounded='full' bg='brand.darkGrey' p={1}>
+                  <Img src='images/Profile.svg' alt='profile picture'/>
+                </Box>
+                <Flex align='center' justify='space-between'>
+                  <VStack align='start' spacing={1}>
+                    <Text fontWeight='bold' color='white'>Darren Baldwin</Text>
+                    <Text fontWeight='thin' color='brand.lightGreen'>Software Engineer</Text>
+                  </VStack>
+                  <Button><HStack><Text>Resume</Text><FontAwesomeIcon icon={faDownload} /></HStack></Button>
+                </Flex>
+                <Box mt={4} p={2} border='1px' rounded='md' borderColor='white'>
+                  <Text color='white'>From a young age, i have always had an interest in the solving of problems. At the age of eleven, I got introduced to programming at a conference. I started with java, then moved to C#, Swift, Python, HTML/CSS, and Javascript. Currently, I use these technologies every day to solve problems, participate in Hackathons, and create advanced web applications. As the industry continues to grow I can't wait to expand my knowledge and solve more modern problems.</Text>
+                </Box>
               </Box>
             </Box>
             <VStack align='start' spacing={10} mr={12}>
