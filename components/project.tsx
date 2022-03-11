@@ -12,8 +12,7 @@ interface props {
 // No need for return types - only do props (according to best practices) - you could do JSX.Element
 const project = ({ image, heading, text, logos, link, github }: props) => {
   return (
-
-      <Box w={{base: 'full', md: 350}} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg'>
+      <Box w={{base: 'full', md: 350}} border='2px' borderWidth={0} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg' style={{transition: '0.1s'}} _hover={{borderWidth: 2, borderColor: 'brand.lightGreen'}}>
         <Box>
           <VStack align='start' spacing={12}>
             <VStack spacing={4} align='start'>
