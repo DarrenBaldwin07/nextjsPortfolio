@@ -102,7 +102,7 @@ const Home: NextPage = () => {
                       <Text fontWeight='bold' color='white'>Darren Baldwin</Text>
                       <Text fontWeight='thin' color='brand.lightGreen'>Software Engineer</Text>
                     </VStack>
-                    <Link href='/assets/Resume.pdf' isExternal><Button><HStack><Text>Resume</Text><FontAwesomeIcon icon={faDownload} /></HStack></Button></Link>
+                    <Link href='/assets/Resume.pdf' isExternal><Button><HStack><Text>Resume</Text><FontAwesomeIcon size='sm' icon={faDownload} /></HStack></Button></Link>
                   </Flex>
                   <Box mt={4} p={2} border='1px' rounded='md' borderColor='white'>
                     <Text color='white'>I have always enjoyed the thrill of solving problems. In 2014, I got introduced to programming at a conference. I started with java, then moved to C#, Swift, Python, HTML/CSS, and Javascript. I use these technologies every day to solve problems, participate in Hackathons, and create advanced web applications. As the industry continues to grow, I'm excited to expand my knowledge and solve more modern problems.</Text>
@@ -130,9 +130,9 @@ const Home: NextPage = () => {
             <SocialsList />
           </VStack>
           <Flex direction='column' mt={36} mb={4} align='center'>
-            <Text fontFamily='roboto' fontSize='12x' color='white'>2022 © Darren Baldwin</Text>
+            <Text className='footer-text' fontFamily='roboto' fontSize='12x' color='white'>2022 © Darren Baldwin</Text>
             <Flex>
-              <Text fontFamily='roboto' fontSize='12px' color='white'>Built with <Text fontWeight='bold' as='span' color='brand.lightGreen'>Next.js</Text> and <Text as='span' color='brand.lightGreen' fontWeight='bold'>ChakraUI</Text>. Powered By</Text>
+              <Text className='footer-text' fontFamily='roboto' fontSize='12px' color='white'>Built with <Text fontWeight='bold' as='span' color='brand.lightGreen'>Next.js</Text> and <Text as='span' color='brand.lightGreen' fontWeight='bold'>ChakraUI</Text>. Powered By</Text>
               <Img ml={1} w={12} src='vercel.svg' alt='vercel'/>
             </Flex>
           </Flex>

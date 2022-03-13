@@ -11,8 +11,8 @@ const socialsList = () => {
                     </Circle>
                 </Link>
                 <Link href='mailto: dmb.programmer@gmail.com' isExternal>
-                    <Circle size={8} bg='brand.lightGreen'>
-                        <FontAwesomeIcon size='lg' color='black' icon={faEnvelope} />
+                    <Circle size={8} p={2} bg='brand.lightGreen'>
+                        <FontAwesomeIcon size='sm' color='black' icon={faEnvelope} />
                     </Circle>
                 </Link>
                 <Link href='https://www.linkedin.com/in/real-darren-baldwin/' isExternal>
