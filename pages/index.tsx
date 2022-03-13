@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import { useEffect, useState } from 'react'
 import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex, Spacer} from '@chakra-ui/react'
 import Navigation from '../components/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,15 +10,6 @@ import Head from 'next/head'
 import SocialsList from '../components/socialsList'
 const Home: NextPage = () => {
 
-
-  useEffect(() => {
-    const func = async () => {
-      const data = await fetch('/api/hello')
-      console.log(await data.json())
-    }
-    
-    func()
-  }, [])
 
   return (
     <Box overflow='hidden'>
@@ -56,6 +46,7 @@ const Home: NextPage = () => {
               <Img display={{base: 'none', lg: 'flex'}} width={{base: 400, x: 500}} src='/images/HeroImg.svg' alt='man coding'/>
             </Box>
           </Box>
+          {/* Work Section */} 
           <Box mt={36}>
             <Flex justifyContent={{base: 'center', md: 'space-between'}} alignItems='center'>
               <Img width={500} src='/images/subHero.svg' alt='code window'/>
@@ -74,6 +65,7 @@ const Home: NextPage = () => {
             <Heading size='lg' color='brand.blue'>Projects</Heading>
             <ProjectList />
           </Box>
+          {/* Stack Section */}
           <Box mt={36} id='stack'>
             <Flex direction={{base: 'column', xl: 'row'}} justify='space-between'>
               <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -300, opacity: 0 }} transition={{duration: 0.25, delay: 0.25}}>
@@ -95,6 +87,7 @@ const Home: NextPage = () => {
             </Flex>
           </Box>
         </Box>
+        {/* About Section */}
         <Box mt={48} id='about' mb={24}>
           <Flex direction={{base: 'column-reverse', lg: 'row'}} align='center' justify='space-between'>
             <Box maxW={{base: 'full', lg: 500}} bg='brand.lightGrey' borderTopLeftRadius={36} borderBottomRadius='md' borderTopRightRadius='md'>
@@ -127,6 +120,12 @@ const Home: NextPage = () => {
               </VStack>
             </motion.div>
           </Flex>
+        </Box>
+        {/* Contact Section */}
+        <Box mt={36}>
+          <VStack>
+            <Heading size='xl' color='brand.blue'>Lets Connect.</Heading>
+          </VStack>
         </Box>
       </Container>
     </Box>

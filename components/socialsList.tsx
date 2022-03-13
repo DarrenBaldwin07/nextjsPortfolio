@@ -1,5 +1,6 @@
 import { Box, Circle, Image as Img, HStack, Link} from '@chakra-ui/react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 const socialsList = () => {
     return (
         <Box>
@@ -9,9 +10,9 @@ const socialsList = () => {
                         <Img p={1.5} src='/images/Github.svg' alt='github'/>
                     </Circle>
                 </Link>
-                <Link href='#' isExternal>
+                <Link href='mailto: dmb.programmer@gmail.com' isExternal>
                     <Circle size={8} bg='brand.lightGreen'>
-                        <Img p={1.5} src='/images/Twitter.svg' alt='Twitter'/>
+                        <FontAwesomeIcon color='black' icon={faEnvelope} />
                     </Circle>
                 </Link>
                 <Link href='https://www.linkedin.com/in/real-darren-baldwin/' isExternal>
