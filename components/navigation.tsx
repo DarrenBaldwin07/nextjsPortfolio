@@ -15,6 +15,7 @@ import {
 import { motion } from "framer-motion"
 import { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
+import NextLink from 'next/link'
 
 export const MotionBox = motion<BoxProps>(Box)
 
@@ -31,6 +32,7 @@ const navigation: NextPage = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+
   }, []);
 
   return (
@@ -41,10 +43,10 @@ const navigation: NextPage = () => {
               <Heading variant='primary'>Darren Baldwin</Heading>
               <Spacer />
               <HStack display={{sm: 'none', md: 'flex'}} spacing={14}>
-                <Box onClick={() => window.scrollTo(0, 1100)}><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>Work</Heading></motion.a></Box>
-                <Box onClick={() => window.scrollTo(0, 1700)}><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>Stack</Heading></motion.a></Box>
-                <Box onClick={() => window.scrollTo(0, 2200)}><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>About</Heading></motion.a></Box>
-                <Button rounded='full' px={6}>Contact</Button>
+                <NextLink href='#projects'><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>Work</Heading></motion.a></NextLink>
+                <NextLink href='#stack'><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>Stack</Heading></motion.a></NextLink>
+                <NextLink href='#about'><motion.a whileHover={{ y: -3 }}><Heading px={4} py={1} _hover={{cursor: 'pointer', border: '2px', rounded: 'full', borderColor: 'brand.lightGreen'}} color='white'>About</Heading></motion.a></NextLink>
+                <Button onClick={() => window.scrollTo(0, 3000)} rounded='full' px={6}>Contact</Button>
               </HStack>
               <Box display={{md: 'none'}}>
                   <Menu>
@@ -52,10 +54,10 @@ const navigation: NextPage = () => {
                       <Img src='/images/MenuIcon.svg' width={12}/>
                     </MenuButton>
                     <MenuList bg='brand.lightGrey' border='2px' borderColor='brand.lightGreen'>
-                      <MenuItem onClick={() => window.scrollTo(0, 950)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Work</MenuItem>
-                      <MenuItem onClick={() => window.scrollTo(0, 2400)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Stack</MenuItem>
-                      <MenuItem onClick={() => window.scrollTo(0, 3050)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>About</MenuItem>
-                      <MenuItem onClick={() => window.scrollTo(0, 3050)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Contact</MenuItem>
+                      <NextLink href='#projects'><MenuItem onClick={() => window.scrollTo(0, 950)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Work</MenuItem></NextLink>
+                      <NextLink href='#stack'><MenuItem onClick={() => window.scrollTo(0, 950)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Stack</MenuItem></NextLink>
+                      <NextLink href='#about'><MenuItem onClick={() => window.scrollTo(0, 950)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>About</MenuItem></NextLink>
+                      <NextLink href='#contact'><MenuItem onClick={() => window.scrollTo(0, 950)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Contact</MenuItem></NextLink>
                     </MenuList>
                   </Menu>
               </Box>

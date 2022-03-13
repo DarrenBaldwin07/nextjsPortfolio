@@ -61,12 +61,14 @@ const Home: NextPage = () => {
               </motion.div>
             </Flex>
           </Box>
-          <Box mt={36} id='projects'>
+          <Box id='projects' />
+          <Box mt={36}>
             <Heading size='lg' color='brand.blue'>Projects</Heading>
             <ProjectList />
           </Box>
+          <Box id='stack' />
           {/* Stack Section */}
-          <Box mt={36} id='stack'>
+          <Box mt={36}>
             <Flex direction={{base: 'column', xl: 'row'}} justify='space-between'>
               <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -300, opacity: 0 }} transition={{duration: 0.25, delay: 0.25}}>
                 <VStack align='start' spacing={10}>
@@ -87,13 +89,14 @@ const Home: NextPage = () => {
             </Flex>
           </Box>
         </Box>
+        <Box id='about' />
         {/* About Section */}
-        <Box mt={48} id='about' mb={24}>
+        <Box mt={48}>
           <Flex direction={{base: 'column-reverse', lg: 'row'}} align='center' justify='space-between'>
             <Box maxW={{base: 'full', lg: 500}} bg='brand.lightGrey' borderTopLeftRadius={36} borderBottomRadius='md' borderTopRightRadius='md'>
               <Box h={100} borderTopLeftRadius={36} borderTopRightRadius='md' bgGradient='linear(to-r, brand.lightGreen, brand.blue)'/>
               <Box p={4}>
-                <Box position='relative' zIndex={10} top={-50} w={16} rounded='full' bg='brand.darkGrey' p={1}>
+                <Box position='relative' top={-50} w={16} rounded='full' bg='brand.darkGrey' p={1}>
                   <Img src='images/Profile.svg' alt='profile picture'/>
                 </Box>
                 <Box position='relative' bottom={5}>
@@ -105,7 +108,7 @@ const Home: NextPage = () => {
                     <Link href='/assets/Resume.pdf' isExternal><Button><HStack><Text>Resume</Text><FontAwesomeIcon icon={faDownload} /></HStack></Button></Link>
                   </Flex>
                   <Box mt={4} p={2} border='1px' rounded='md' borderColor='white'>
-                    <Text color='white'>From a young age, i have always had an interest in the solving of problems. At the age of eleven, I got introduced to programming at a conference. I started with java, then moved to C#, Swift, Python, HTML/CSS, and Javascript. Currently, I use these technologies every day to solve problems, participate in Hackathons, and create advanced web applications. As the industry continues to grow I can't wait to expand my knowledge and solve more modern problems.</Text>
+                    <Text color='white'>From a young age, i have always had an interest in the solving of problems. At the age of eleven, I got introduced to programming at a conference. I started with java, then moved to C#, Swift, Python, HTML/CSS, and Javascript. Currently, I use these technologies every day to solve problems, participate in Hackathons, and create advanced web applications. As the industry continues to grow, I'm excited to expand my knowledge and solve more modern problems.</Text>
                   </Box>
                 </Box>
               </Box>
@@ -122,10 +125,20 @@ const Home: NextPage = () => {
           </Flex>
         </Box>
         {/* Contact Section */}
+        <Box id='contact' />
         <Box mt={36}>
-          <VStack>
-            <Heading size='xl' color='brand.blue'>Lets Connect.</Heading>
+          <VStack spacing={6}>
+            <Heading fontSize={{base: '35px', md: '45px'}} color='brand.blue'>Lets Connect.</Heading>
+            <Text maxW={500} textAlign='center' color='white'>I am currently open to work as a <Text as='span' color='brand.lightGreen'>Full Stack Developer.</Text> Lets get in touch and discuss some of your latest endeavors.</Text>
+            <SocialsList />
           </VStack>
+          <Flex direction='column' mt={36} mb={4} align='center'>
+            <Text fontFamily='roboto' fontSize='12x' color='white'>2022 © Darren Baldwin</Text>
+            <Flex>
+              <Text fontFamily='roboto' fontSize='12px' color='white'>Built with <Text fontWeight='bold' as='span' color='brand.lightGreen'>Next.js</Text> and <Text as='span' color='brand.lightGreen' fontWeight='bold'>ChakraUI</Text>. Powered By</Text>
+              <Img ml={1} w={12} src='vercel.svg' alt='vercel'/>
+            </Flex>
+          </Flex>
         </Box>
       </Container>
     </Box>
