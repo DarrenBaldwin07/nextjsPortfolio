@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex, Spacer} from '@chakra-ui/react'
 import Navigation from '../components/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 import Head from 'next/head'
 import SocialsList from '../components/socialsList'
 const Home: NextPage = () => {
+
 
   useEffect(() => {
     const func = async () => {
@@ -45,7 +46,9 @@ const Home: NextPage = () => {
                     <Box display={{base: 'flex', md: 'none'}}>
                       <FontAwesomeIcon size="lg" color='#39BA8C' icon={faArrowDown} />
                     </Box>
-                    <Button my={{base: 4, md: 0}} ml={{base: 'none', md: 4}} variant='border' size='lg'>My Work</Button>
+                    <Link href='https://github.com/Devd0' isExternal>
+                      <Button my={{base: 4, md: 0}} ml={{base: 'none', md: 4}} variant='border' size='lg'>My Work</Button>
+                    </Link>
                   </Flex>
                   <SocialsList />
                 </VStack>
@@ -92,33 +95,37 @@ const Home: NextPage = () => {
             </Flex>
           </Box>
         </Box>
-        <Box mt={56} id='about' mb={24}>
-          <Flex align='center' justify='space-between'>
-            <Box h={450} w={500} bg='brand.lightGrey' borderTopLeftRadius={36} borderBottomRadius='md' borderTopRightRadius='md'>
+        <Box mt={48} id='about' mb={24}>
+          <Flex direction={{base: 'column-reverse', lg: 'row'}} align='center' justify='space-between'>
+            <Box maxW={{base: 'full', lg: 500}} bg='brand.lightGrey' borderTopLeftRadius={36} borderBottomRadius='md' borderTopRightRadius='md'>
               <Box h={100} borderTopLeftRadius={36} borderTopRightRadius='md' bgGradient='linear(to-r, brand.lightGreen, brand.blue)'/>
-              <Box p={4} position='relative' top={-50}>
-                <Box w={16} rounded='full' bg='brand.darkGrey' p={1}>
+              <Box p={4}>
+                <Box position='relative' zIndex={10} top={-50} w={16} rounded='full' bg='brand.darkGrey' p={1}>
                   <Img src='images/Profile.svg' alt='profile picture'/>
                 </Box>
-                <Flex align='center' justify='space-between'>
-                  <VStack align='start' spacing={1}>
-                    <Text fontWeight='bold' color='white'>Darren Baldwin</Text>
-                    <Text fontWeight='thin' color='brand.lightGreen'>Software Engineer</Text>
-                  </VStack>
-                  <Button><HStack><Text>Resume</Text><FontAwesomeIcon icon={faDownload} /></HStack></Button>
-                </Flex>
-                <Box mt={4} p={2} border='1px' rounded='md' borderColor='white'>
-                  <Text color='white'>From a young age, i have always had an interest in the solving of problems. At the age of eleven, I got introduced to programming at a conference. I started with java, then moved to C#, Swift, Python, HTML/CSS, and Javascript. Currently, I use these technologies every day to solve problems, participate in Hackathons, and create advanced web applications. As the industry continues to grow I can't wait to expand my knowledge and solve more modern problems.</Text>
+                <Box position='relative' bottom={5}>
+                  <Flex align='center' justify='space-between'>
+                    <VStack align='start' spacing={1}>
+                      <Text fontWeight='bold' color='white'>Darren Baldwin</Text>
+                      <Text fontWeight='thin' color='brand.lightGreen'>Software Engineer</Text>
+                    </VStack>
+                    <Link href='/assets/Resume.pdf' isExternal><Button><HStack><Text>Resume</Text><FontAwesomeIcon icon={faDownload} /></HStack></Button></Link>
+                  </Flex>
+                  <Box mt={4} p={2} border='1px' rounded='md' borderColor='white'>
+                    <Text color='white'>From a young age, i have always had an interest in the solving of problems. At the age of eleven, I got introduced to programming at a conference. I started with java, then moved to C#, Swift, Python, HTML/CSS, and Javascript. Currently, I use these technologies every day to solve problems, participate in Hackathons, and create advanced web applications. As the industry continues to grow I can't wait to expand my knowledge and solve more modern problems.</Text>
+                  </Box>
                 </Box>
               </Box>
             </Box>
-            <VStack align='start' spacing={10} mr={12}>
-              <Box ml={10}>
-                <Heading size='xl' color='brand.blue'>About Me</Heading>
-                <Text color='white'>My story, who i am, and what i do.</Text>
-              </Box>
-              <Img h={100} src='images/codeOne.svg' alt='code' />
-            </VStack>
+            <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: 300, opacity: 0 }} transition={{duration: 0.25, delay: 0.5}}>
+              <VStack align='start' spacing={10} mr={{base: 0, lg: 12}} mb={{base: 12, lg: 0}}>
+                <Box ml={{base: 0, lg: 10}} textAlign={{base: 'center', lg: 'start'}}>
+                  <Heading size='xl' color='brand.blue'>About Me</Heading>
+                  <Text color='white'>My story, who i am, and what i do.</Text>
+                </Box>
+                <Img display={{base: 'none', lg: 'block'}} h={100} src='images/codeOne.svg' alt='code' />
+              </VStack>
+            </motion.div>
           </Flex>
         </Box>
       </Container>
