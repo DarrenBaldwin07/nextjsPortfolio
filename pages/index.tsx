@@ -29,10 +29,7 @@ const Home: NextPage = () => {
                 </VStack>
                 <VStack align={{base: 'center', lg:'start'}}>
                   <Flex flexDirection={{base: 'column', md: 'row'}} align='center' justifyContent='center'>
-                    <Text color='white' my={{base: 4, md: 0}} mr={{base: 'none', md: 4}}>Talk is cheap, show me the code</Text>
-                    <Box display={{base: 'none', md: 'flex'}}>
-                      <FontAwesomeIcon size="lg" color='#39BA8C' icon={faArrowRight} />
-                    </Box>
+                    <Text color='white' my={{base: 4, md: 0}} mr={{base: 'none', md: 4}}>Talk is cheap, show me the code: </Text>
                     <Box display={{base: 'flex', md: 'none'}}>
                       <FontAwesomeIcon size="lg" color='#39BA8C' icon={faArrowDown} />
                     </Box>
