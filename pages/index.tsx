@@ -105,7 +105,7 @@ const Home: NextPage = () => {
                     <Link href='/assets/Resume.pdf' isExternal><Button><HStack><Text>Resume</Text><FontAwesomeIcon icon={faDownload} /></HStack></Button></Link>
                   </Flex>
                   <Box mt={4} p={2} border='1px' rounded='md' borderColor='white'>
-                    <Text color='white'>From a young age, i have always had an interest in the solving of problems. At the age of eleven, I got introduced to programming at a conference. I started with java, then moved to C#, Swift, Python, HTML/CSS, and Javascript. Currently, I use these technologies every day to solve problems, participate in Hackathons, and create advanced web applications. As the industry continues to grow, I'm excited to expand my knowledge and solve more modern problems.</Text>
+                    <Text color='white'>I have always enjoyed the thrill of solving problems. In 2014, I got introduced to programming at a conference. I started with java, then moved to C#, Swift, Python, HTML/CSS, and Javascript. I use these technologies every day to solve problems, participate in Hackathons, and create advanced web applications. As the industry continues to grow, I'm excited to expand my knowledge and solve more modern problems.</Text>
                   </Box>
                 </Box>
               </Box>
