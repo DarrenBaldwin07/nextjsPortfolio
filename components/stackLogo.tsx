@@ -7,7 +7,7 @@ interface props {
     img: string
 }
 
-const stackLogo = ({ title, img }: props) => {
+const StackLogo = ({ title, img }: props) => {
     const [show, setShow] = useState(false)
     return (
         <VStack spacing='4'>
@@ -25,4 +25,4 @@ const stackLogo = ({ title, img }: props) => {
     )
 }
 
-export default stackLogo
+export default StackLogo

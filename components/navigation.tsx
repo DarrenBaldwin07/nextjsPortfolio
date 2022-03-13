@@ -19,7 +19,7 @@ import NextLink from 'next/link'
 
 export const MotionBox = motion<BoxProps>(Box)
 
-const navigation: NextPage = () => {
+const Navigation: NextPage = () => {
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
@@ -70,4 +70,4 @@ const navigation: NextPage = () => {
   )
 }
 
-export default navigation
+export default Navigation
