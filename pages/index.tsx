@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex, Spacer} from '@chakra-ui/react'
 import Navigation from '../components/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faArrowDown, faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faDownload } from '@fortawesome/free-solid-svg-icons'
 import ProjectList from '../components/projectList'
 import StackLogo from '../components/stackLogo'
 import { motion } from "framer-motion"
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
               </motion.div>
               <HStack flexWrap='wrap' align='start' justify='space-between' spacing={{base: 0, xl: 16}}>
                 <StackLogo title='React' img='images/React.svg'/>
-                <StackLogo title='Vue.js' img='images/Vue.svg'/>
+                <StackLogo title='Vue.js' img='images/vue.svg'/>
                 <StackLogo title='Typescript' img='images/Typescript.svg'/>
                 <StackLogo title='Node.js' img='images/Node.svg'/>
                 <StackLogo title='Python' img='images/Python.svg'/>
