@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { useEffect, useState } from 'react'
-import NextLink from "next/link"
 import type { NextPage } from 'next'
 
 export const MotionBox = motion<BoxProps>(Box)
@@ -53,9 +52,10 @@ const navigation: NextPage = () => {
                       <Img src='/images/MenuIcon.svg' width={12}/>
                     </MenuButton>
                     <MenuList bg='brand.lightGrey' border='2px' borderColor='brand.lightGreen'>
-                      <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><a href='#'>Work</a></MenuItem>
-                      <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><a href='#'>Stack</a></MenuItem>
-                      <MenuItem _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'><a href='#'>About</a></MenuItem>
+                      <MenuItem onClick={() => window.scrollTo(0, 950)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Work</MenuItem>
+                      <MenuItem onClick={() => window.scrollTo(0, 2400)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Stack</MenuItem>
+                      <MenuItem onClick={() => window.scrollTo(0, 3050)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>About</MenuItem>
+                      <MenuItem onClick={() => window.scrollTo(0, 3050)} _hover={{bg: 'brand.darkGrey'}} _focus={{bg: 'brand.darkGrey'}} color='brand.lightGreen'>Contact</MenuItem>
                     </MenuList>
                   </Menu>
               </Box>

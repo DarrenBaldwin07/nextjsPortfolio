@@ -11,7 +11,7 @@ const stackLogo = ({ title, img }: props) => {
     const [show, setShow] = useState(false)
     return (
         <VStack spacing='4'>
-            <Box visibility={show ? 'visible' : 'hidden'}>
+            <Box display={{base: 'none', md: 'block'}} visibility={show ? 'visible' : 'hidden'}>
                 <motion.div animate={show ? { scale: 1.2 } : {}} transition={{duration: 0.5, ease: "easeOut"}}>
                     <Box w={100} textAlign='center' p={2} rounded='full' opacity={0.8} bg='brand.lightGrey' >
                         <Text color='white'>{title}</Text>
