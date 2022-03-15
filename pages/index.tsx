@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex, Spacer} from '@chakra-ui/react'
+import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex } from '@chakra-ui/react'
 import Navigation from '../components/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown, faDownload } from '@fortawesome/free-solid-svg-icons'
@@ -8,6 +8,7 @@ import StackLogo from '../components/stackLogo'
 import { motion } from "framer-motion"
 import Head from 'next/head'
 import SocialsList from '../components/socialsList'
+import Image from 'next/image'
 const Home: NextPage = () => {
 
 
@@ -40,7 +41,9 @@ const Home: NextPage = () => {
                   <SocialsList />
                 </VStack>
               </VStack>
-              <Img display={{base: 'none', lg: 'flex'}} width={{base: 400, x: 500}} src='/images/HeroImg.svg' alt='man coding'/>
+              <Box display={{base: 'none', lg: 'flex'}}>
+                <Image width={500} height={500} src='/images/HeroImg.svg' alt='man coding'/>
+              </Box>
             </Box>
           </Box>
           {/* Work Section */} 
