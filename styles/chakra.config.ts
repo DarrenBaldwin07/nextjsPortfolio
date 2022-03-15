@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme, theme as Theme } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 import { buttonStyles as Button } from './components/buttonStyles'
 import { headerStyles as Heading } from './components/headerStyles'
@@ -26,6 +26,7 @@ const theme = {
   colors: colors,
 
   fonts: {
+    ...Theme.fonts,
     body: 'righteous',
     heading: 'righteous'
   },
