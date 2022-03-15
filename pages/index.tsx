@@ -41,13 +41,15 @@ const Home: NextPage = () => {
                   <SocialsList />
                 </VStack>
               </VStack>
-              <Img display={{base: 'none', lg: 'flex'}} width={{base: 400, x: 500}} src='/images/HeroImg.svg' alt='man coding'/>
+              <Box display={{base: 'none', lg: 'flex'}} width={{base: 400, x: 500}}>
+                <Image width={500} height={500} src='/images/HeroImg.svg' alt='man coding'/>
+              </Box>
             </Box>
           </Box>
           {/* Work Section */} 
-          <Box mt={36}>
+          <Box mt={{base: 12, md: 36}}>
             <Flex justifyContent={{base: 'center', md: 'space-between'}} alignItems='center'>
-              <Img width={500} src='/images/subHero.svg' alt='code window'/>
+              <Image width={500} height={500} src='/images/subHero.svg' alt='code window'/>
               <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: 300, opacity: 0 }} transition={{duration: 0.25, delay: 0.25}}>
                 <VStack spacing={10} display={{base: 'none', md: 'block'}}>
                   <Box maxW={300} ml={{base: 0, lg: 10}}>
