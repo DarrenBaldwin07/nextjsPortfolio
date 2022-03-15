@@ -34,11 +34,7 @@ const theme = {
       global: { // this is where we would declare global font families to apply to everything
         body: {
           bg: 'brand.darkGrey',
-          '@font-face': {
-            fontFamily: "righteous",
-            src: 'url("/fonts/righteous/Righteous-Regular.ttf")',
-            fontStyle: 'normal',
-          }
+  
         },
         '.footer-text': {
           '@font-face': {
