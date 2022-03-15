@@ -41,9 +41,7 @@ const Home: NextPage = () => {
                   <SocialsList />
                 </VStack>
               </VStack>
-              <Box display={{base: 'none', lg: 'flex'}}>
-                <Image width={500} height={500} src='/images/HeroImg.svg' alt='man coding'/>
-              </Box>
+              <Img display={{base: 'none', lg: 'flex'}} width={{base: 400, x: 500}} src='/images/HeroImg.svg' alt='man coding'/>
             </Box>
           </Box>
           {/* Work Section */} 
