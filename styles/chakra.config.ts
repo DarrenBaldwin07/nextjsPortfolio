@@ -28,7 +28,7 @@ const theme = {
   fonts: {
     ...Theme.fonts,
     body: 'righteous',
-    heading: 'righteous'
+    heading: 'righteous',
   },
 
 

@@ -130,9 +130,9 @@ const Home: NextPage = () => {
             <SocialsList />
           </VStack>
           <Flex direction='column' mt={36} mb={4} align='center'>
-            <Text className='footer-text' fontFamily='roboto' fontSize='12x' color='white'>2022 © Darren Baldwin</Text>
+            <Text fontSize='12x' color='white'>2022 © Darren Baldwin</Text>
             <Flex>
-              <Text className='footer-text' fontFamily='roboto' fontSize='12px' color='white'>Built with <Text fontWeight='bold' as='span' color='brand.lightGreen'>Next.js</Text> and <Text as='span' color='brand.lightGreen' fontWeight='bold'>ChakraUI</Text>. Powered By</Text>
+              <Text fontSize='12px' color='white'>Built with <Text fontWeight='bold' as='span' color='brand.lightGreen'>Next.js</Text> and <Text as='span' color='brand.lightGreen' fontWeight='bold'>ChakraUI</Text>. Powered By</Text>
               <Img ml={1} w={12} src='vercel.svg' alt='vercel'/>
             </Flex>
           </Flex>
