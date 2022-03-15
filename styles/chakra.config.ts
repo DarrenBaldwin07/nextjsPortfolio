@@ -26,23 +26,16 @@ const theme = {
   colors: colors,
 
   fonts: {
-    body: 'Righteous', 
-    heading: 'Righteous'
+    heading: 'righteous'
   },
+
 
   styles: { // global styles for buttons
       global: { // this is where we would declare global font families to apply to everything
         body: {
           bg: 'brand.darkGrey',
-  
         },
-        '.footer-text': {
-          '@font-face': {
-            fontFamily: "roboto",
-            src: 'url("/fonts/roboto/Roboto-Regular.ttf")',
-            fontStyle: 'normal',
-          }
-        },
+
         html: {
           scrollBehavior: 'smooth',
         },
