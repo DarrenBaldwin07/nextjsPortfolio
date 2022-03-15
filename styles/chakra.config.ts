@@ -26,6 +26,7 @@ const theme = {
   colors: colors,
 
   fonts: {
+    body: 'righteous',
     heading: 'righteous'
   },
 
