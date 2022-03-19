@@ -32,8 +32,8 @@ const theme = {
   },
 
 
-  styles: { // global styles for buttons
-      global: { // this is where we would declare global font families to apply to everything
+  styles: {
+      global: { 
         body: {
           bg: 'brand.darkGrey',
         },
@@ -41,11 +41,10 @@ const theme = {
         html: {
           scrollBehavior: 'smooth',
         },
-
       }
   },
 
-  components: { // ovverride existing styles by component
+  components: { 
     Button,
     Heading,
   }
