@@ -1,7 +1,7 @@
 import { Box, Circle, Image as Img, HStack, Link} from '@chakra-ui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-const socialsList = () => {
+const SocialsList = () => {
     return (
         <Box>
             <HStack spacing={5}>
@@ -25,4 +25,4 @@ const socialsList = () => {
     )
 }
 
-export default socialsList
+export default SocialsList

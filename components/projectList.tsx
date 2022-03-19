@@ -1,10 +1,10 @@
 import { Box, Stack } from "@chakra-ui/react"
-import Project from "./project"
+import Project from './Project'
 import React from 'react'
 import { motion } from "framer-motion"
 import projects from '../data/projects'
 
-const projectList = () => {
+const ProjectList = () => {
   
   return (
     <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ x: -300, opacity: 0 }}  transition={{duration: 0.25, delay: 0.40}}>
@@ -17,4 +17,4 @@ const projectList = () => {
   )
 }
 
-export default projectList
+export default ProjectList

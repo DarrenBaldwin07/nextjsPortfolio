@@ -19,7 +19,7 @@ const StackLogo = ({ title, img }: props) => {
                 </motion.div>
             </Box>
             <Box h={100} onMouseOver={() => setShow(true)} onMouseLeave={() => setShow(false)} _hover={{cursor: 'pointer'}}>    
-                <Img m={{base: 4, md: 0}} w={24} src={img} alt='vue.js'/>
+                <Img m={{base: 4, md: 0}} w={24} src={img} alt='stack logo'/>
             </Box>
         </VStack>
     )

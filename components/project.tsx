@@ -10,7 +10,7 @@ interface props {
     github: string
 }
 // No need for return types - only do props (according to best practices) - you could do JSX.Element
-const project = ({ image, heading, text, logos, link, github }: props) => {
+const Project = ({ image, heading, text, logos, link, github }: props) => {
   return (
       <Box  border='2px'  borderWidth={0} boxShadow='lg' bg='brand.lightGrey' p={4} rounded='lg' style={{transition: '0.1s'}} _hover={{borderWidth: 2, borderColor: 'brand.lightGreen'}}>
         <Box>
@@ -34,4 +34,4 @@ const project = ({ image, heading, text, logos, link, github }: props) => {
   )
 }
 
-export default project
+export default Project
