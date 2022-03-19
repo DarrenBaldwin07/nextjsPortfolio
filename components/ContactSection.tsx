@@ -1,6 +1,5 @@
 import { Box, Text, Image as Img, VStack, Heading, Flex } from "@chakra-ui/react"
 import SocialsList from '../components/SocialsList'
-
 const ContactSection = () => {
     return (
         <>
