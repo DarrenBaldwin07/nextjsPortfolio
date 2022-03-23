@@ -41,7 +41,7 @@ const Home: NextPage = () => {
                 </VStack>
               </VStack>
               <Box display={{base: 'none', lg: 'flex'}} width={{base: 400, x: 500}}>
-                <Image width={500} height={500} src='/images/HeroImg.svg' alt='man coding'/>
+                <Image width={500} height={500} src='/images/HeroImg.svg' alt='man coding' priority/>
               </Box>
             </Box>
           </Box>
