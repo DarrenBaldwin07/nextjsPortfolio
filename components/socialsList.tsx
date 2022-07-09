@@ -5,7 +5,7 @@ const SocialsList = () => {
     return (
         <Box>
             <HStack spacing={5}>
-                <Link href='https://github.com/Devd0' isExternal>
+                <Link href='https://github.com/DarrenBaldwin07' isExternal>
                     <Circle size={8} bg='brand.lightGreen'>
                         <Img p={1.5} src='/images/Github.svg' alt='github'/>
                     </Circle>

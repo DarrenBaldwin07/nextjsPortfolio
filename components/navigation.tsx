@@ -32,8 +32,9 @@ const Navigation: NextPage = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-
   }, []);
+
+  const [state, setState] = useState()
 
   return (
     <Box position='fixed' zIndex={2} top={0} py={4} bg={scrollY > 10 ? 'brand.darkGrey' : ''}  opacity={scrollY > 10 ? 1 : 1} width='full'>

@@ -47,6 +47,18 @@ const theme = {
   components: { 
     Button,
     Heading,
+    Link: {
+      variants: {
+        primary: {
+          _hover: {
+            textDecoration: 'none'
+          }
+        }
+      },
+      defaultProps: {
+        variant: 'primary',
+      },
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Text, Box, Container, Heading, VStack, Image as Img, HStack, Button, Link, Flex } from '@chakra-ui/react'
+import { Text, Box, Container, Heading, VStack, Button, Link, Flex } from '@chakra-ui/react'
 import Navigation from '../components/Navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
                     <Box display={{base: 'flex', md: 'none'}}>
                       <FontAwesomeIcon size="lg" color='#39BA8C' icon={faArrowDown} />
                     </Box>
-                    <Link href='https://github.com/Devd0' isExternal>
+                    <Link href='https://github.com/DarrenBaldwin07' isExternal>
                       <Button my={{base: 4, md: 0}} ml={{base: 'none', md: 4}} variant='border' size='lg'>My Work</Button>
                     </Link>
                   </Flex>
